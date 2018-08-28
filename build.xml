@@ -11,7 +11,7 @@
 
                      serverurl="${sf2.serverurl}" 
 
-                     deployRoot="depcode"
+                     deployRoot="retrievecode"
 		     
 		     autoUpdatePackage="true"
 
