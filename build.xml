@@ -13,7 +13,7 @@
 
                      deployRoot="src"
 		     
-		     autoPackageUpdate="true"
+		     autoUpdatePackage="true"
 
                      ignoreWarnings="true"
 
