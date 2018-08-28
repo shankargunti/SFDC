@@ -17,9 +17,7 @@
 
                      ignoreWarnings="true"
 
-                     singlePackage="true"
-
-                     purgeOnDelete="true" />
+ />
 
     </target>
 
