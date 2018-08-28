@@ -13,7 +13,7 @@
 
                      deployRoot="depcode"
 		     
-		     autoUpdatePackage="true"
+		     autoUpdatePackage="false"
 
                      ignoreWarnings="true" />
  </target>
