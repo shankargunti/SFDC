@@ -19,11 +19,11 @@ name=`"Sample usage of Salesforce Ant tasks`"  >
 		   $TestPath
 		   if(($TestPath).Length -gt 0)
 		   {
-		   "<sf:deploy allowMissingFiles=`"TRUE`" checkOnly=`"FALSE`" autoUpdatePackage=`"TRUE`" rollbackOnError=`"TRUE`" deployRoot=`"_________`" serverurl=`"${sf.serverurl}`" password=`"${sf.password}`" username=`"${sf.username}`" testlevel=`"RunSpecifiedTests`"/>" | out-file $BuildxmlLocation"build.xml" -append
+		   "<sf:deploy allowMissingFiles=`"TRUE`" checkOnly=`"FALSE`" autoUpdatePackage=`"TRUE`" rollbackOnError=`"TRUE`" deployRoot=`"src`" serverurl=`"${sf.serverurl}`" password=`"${sf.password}`" username=`"${sf.username}`" testlevel=`"RunSpecifiedTests`"/>" | out-file $BuildxmlLocation"build.xml" -append
 		   }
 		   else 
 		   {
-		   "<sf:deploy allowMissingFiles=`"TRUE`" checkOnly=`"FALSE`" autoUpdatePackage=`"TRUE`" rollbackOnError=`"TRUE`" deployRoot=`"_________`" serverurl=`"${sf.serverurl}`" password=`"${sf.password}`" username=`"${sf.username}`"/>" | out-file $BuildxmlLocation"build.xml" -append
+		   "<sf:deploy allowMissingFiles=`"TRUE`" checkOnly=`"FALSE`" autoUpdatePackage=`"TRUE`" rollbackOnError=`"TRUE`" deployRoot=`"src`" serverurl=`"${sf.serverurl}`" password=`"${sf.password}`" username=`"${sf.username}`"/>" | out-file $BuildxmlLocation"build.xml" -append
 		   }
 		   $sourceFiles=@()
 		   $sourceFiles=Get-ChildItem "Delta\src"|?{$_.Attributes -eq "Directory"}
