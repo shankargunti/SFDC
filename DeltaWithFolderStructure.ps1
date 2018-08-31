@@ -59,5 +59,41 @@ function Copy-New-Item {
 				}
 			}
 		}
-	
-	
+	#Copy class test and meta files into Delta 
+	#Get the folder name under src 
+	$lastword =(($m.fullname)ToString().split("\"))[-2]
+	#Iterate through classes folder for Test Classes(suffix as Test)
+If($lastword -match "classes")	
+{
+	for($i2=0;$i2 -lt $s1.length ;$i2++)
+{
+	if($m.fullname -Contains $s1[$12].Replace(".cls","")+"Test.cls")
+	{
+		$folder =$m.fullname
+		#testclasss file name (Suffix as Test)
+		$s12=$s11[$i2].Replace(".cls","")+"Test.cls"
+		Copy-New-Item $folder $s12
+	 
+	}
+	else 
+	{
+		#write-host "Files do not exist in latest build: $s1[$i2]"
+	}
+}
+for($i2=0;$i2 -lt $s1.length; $i2++)
+{
+	if($m.fullname -Contains $s1[$i2].Replace(".cls","")+"Test.cls-meta.xml")
+	Copy-New-Item $folder $s12
+}
+else
+{
+	##write-host "Files do not exist in latest build: $s1[$i2]"
+}
+}
+#Copy Testclass and meta file into Delta(Prefix as Test)
+for($i2=0;$i2 -lt $s1.Length;$i2++)
+{
+	#Get the class file and meta
+	$lastword=($s1[$i2].ToString().split("\"))[-1]
+}
+}
