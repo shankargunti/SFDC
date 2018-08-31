@@ -97,3 +97,27 @@ for($i2=0;$i2 -lt $s1.Length;$i2++)
 	$lastword=($s1[$i2].ToString().split("\"))[-1]
 }
 }
+$file3=($s1[$si2].tostring()).trimend("$lastword")
+$file3=$file3 + "Test"+ $lastword
+$file33=$file3 + "-meta.xml"
+
+if($m.fullname -Contains $file3 -or $m.fullname -Contains $file33)
+{
+    $folder=$m.fullname
+    $s12=$s11[$i2]
+    $lastword1=($s12.ToString().split("\"))[-1]
+    $file31=($s12.tostring()).trimend($lastword1)
+    $file31=$file31+ "Test"+ $lastword1
+    $file34=$file31+"-meta.xml"
+    if($m.fullname -Contains $file3)
+    {
+        Copy-New-Item $folder $file31
+    }
+    if($m.fullname -Contains $file33)
+    {
+        Copy-New-Item $folder $file34
+    }
+}
+}
+}
+}
