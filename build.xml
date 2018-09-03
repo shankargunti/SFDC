@@ -3,7 +3,7 @@
     <property file="build.properties"/>
     <property environment="env"/>
 
-    <target name="deployorg">
+    <target name="deploy">
 
         <sf:deploy username="${sf2.username}" 
 
@@ -11,7 +11,7 @@
 
                      serverurl="${sf2.serverurl}" 
 
-                     deployRoot="deploycode"
+                     deployRoot="src"
 		     
 		     autoUpdatePackage="true"
 
